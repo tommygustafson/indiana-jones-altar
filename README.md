@@ -4,6 +4,12 @@ This is the code that connects the PN532 RFID reader, activates the linear actua
 - Pi zero -> runs altar_pn532.py which drives the PN532 RFID reader, controls linear actuator and sends commands to other devices with ESP322 radio
 - Pi 3 -> runs listen-act.py, which receives the RFID key tag string via ESP322 and can then act based on this tag
 
+Workflow
+---------------
+
+To DO:
+--------
+
 Working on using Github Desktop
 
 -------------------------------------
@@ -32,4 +38,3 @@ Tips for use of Git / Github:
 - Git push origin main   # pushes changes on pi’s to GitHub
 - Git pull origin main  # pulls or gets files from Github to pi
 
-- BIG CHANGES!!!!!
