@@ -35,6 +35,7 @@ Other libraries required:
     --> Info specifically on SPI bus
   - https://learn.adafruit.com/adafruit-pn532-rfid-nfc/python-circuitpython
     -->  Installing the PN532 libraries, wiring diagrams for the PN532 breakout board
+    --> pip3 install adafruit-circuitpython-pn532
   - https://circuitpython-nrf24l01.readthedocs.io/en/latest/
     --> Installing the nrf libraries, wiring, pinouts for the NRF42l01 wireless transceiver
 
