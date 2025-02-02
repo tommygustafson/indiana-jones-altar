@@ -4,6 +4,9 @@ This is the code that connects the PN532 RFID reader, activates the linear actua
 - Pi zero -> runs altar_pn532.py which drives the PN532 RFID reader, controls linear actuator and sends commands to other devices with ESP322 radio
 - Pi 3 -> runs listen-act.py, which receives the RFID key tag string via ESP322 and can then act based on this tag
 
+Info on setting up git:
+***
+
 Libraries needed:
 CircuitPython
 - https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi
