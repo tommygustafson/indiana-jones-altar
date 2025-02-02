@@ -23,7 +23,7 @@ PN_532 setup
   - SCK (on red PN532) connects to SCLK (GPIO 11)
   - MISO (on red PN532) connects to MISO (GPIO 9)
   - MOSI (on red PN532) connects to MOSI (GPIO 10)
-  - SS (on red PN532) connects to CE0 (GPIO 8)
+  - SS (on red PN532) connects to GPIO 5
 
 -------------------------------------
 
