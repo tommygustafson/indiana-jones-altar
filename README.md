@@ -5,7 +5,7 @@ This is the code that connects the PN532 RFID reader, activates the linear actua
 - Pi 3 -> runs listen-act.py, which receives the RFID key tag string via ESP322 and can then act based on this tag
 
 Info on setting up git:
-***
+- include about install github CLI, needs personal token
 
 Libraries needed:
 CircuitPython
