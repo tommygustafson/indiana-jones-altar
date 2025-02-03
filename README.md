@@ -23,11 +23,10 @@ Setting up OS for raspberry pi:
 
 
 Libraries needed:
-CircuitPython
-- Already installed during setup of raspberry pi
-
-Adafruit_pn532
-- sudo pip3 install adafruit-circuitpython-pn532
+- CircuitPython
+  - Already installed during setup of raspberry pi
+- Adafruit_pn532
+  - sudo pip3 install adafruit-circuitpython-pn532
 
 PN_532 setup
 - Uses 4 pins, plus a Vcc and Gnd
