@@ -17,6 +17,9 @@ Setting up OS for raspberry pi:
 - - Git commit -am “commit notes”
   - Git push origin main   # pushes changes on pi’s to GitHub
   - Git pull origin main  # pulls or gets files from Github to pi
+- Use Visual Code Studio running on main PC to edit code directly on Raspberry Pi using "Remote SSH" plugin
+  - https://www.raspberrypi.com/news/coding-on-raspberry-pi-remotely-with-visual-studio-code/
+  - https://randomnerdtutorials.com/raspberry-pi-remote-ssh-vs-code/
 
 
 Libraries needed:
