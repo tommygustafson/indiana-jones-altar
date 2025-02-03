@@ -41,7 +41,7 @@ from digitalio import DigitalInOut, Direction, Pull
 import time
 import struct
 from datetime import datetime
-from circuitpython_nrf24l01.rf24 import RF24
+#from circuitpython_nrf24l01.rf24 import RF24
 from adafruit_pn532.spi import PN532_SPI
 import subprocess
 
@@ -122,7 +122,7 @@ def add_tag_to_list(tag_list, uid):
 
 def process_tag(tag_list,uid,prior_tag_str):
     # TO DO: Make extend and retractor tag as lists to allow multiple tags / objects
-    extend_actuator_tag = "56146162137"
+    extend_actuator_tag = "88856146162137"
     retract_actuator_tag = "24023514149"
 
     # datetime object containing current date and time
