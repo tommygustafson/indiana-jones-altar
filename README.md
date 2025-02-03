@@ -1,19 +1,27 @@
 # Indiana Jones - Fertility Idol Altar
 This is the code that connects the PN532 RFID reader, activates the linear actuator and can also communicate with other devices with ESP322 radio
 
-- Pi zero -> runs altar_pn532.py which drives the PN532 RFID reader, controls linear actuator and sends commands to other devices with ESP322 radio
+- Pi 3 or pi zero W2-> runs altar_pn532.py which drives the PN532 RFID reader, controls linear actuator and sends commands to other devices with ESP322 radio
 - Pi 3 -> runs listen-act.py, which receives the RFID key tag string via ESP322 and can then act based on this tag
 
-Info on setting up git:
-- Quickstart for use of gh to allow for persistent login:
+Setting up OS for raspberry pi:
+- Install current headless version of Raspberry pi OS with Raspberry Pi Imager
+- Install CircuitPython
+- - https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi
+  - Need to run the command "source env/bin/activate" everytime the pi reboots
+- Install gh (github desktop) to allow for persistent login:
 - - https://docs.github.com/en/github-cli/github-cli/quickstart
   - https://github.com/cli/cli/blob/trunk/docs/install_linux.md
   - Needs personal token: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic
+- Otherwise, git is used for version control
+- - Git commit -am “commit notes”
+  - Git push origin main   # pushes changes on pi’s to GitHub
+  - Git pull origin main  # pulls or gets files from Github to pi
+
 
 Libraries needed:
 CircuitPython
-- https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi
-- Need to run the command "source env/bin/activate" everytime the pi reboots
+- Already installed during setup of raspberry pi
 
 PN_532 setup
 - Uses 4 pins, plus a Vcc and Gnd
@@ -45,10 +53,5 @@ Other libraries required:
   - https://circuitpython-nrf24l01.readthedocs.io/en/latest/
     --> Installing the nrf libraries, wiring, pinouts for the NRF42l01 wireless transceiver
 
---------------------------------------
 
-Tips for use of Git / Github:
-- Git commit -am “commit notes”
-- Git push origin main   # pushes changes on pi’s to GitHub
-- Git pull origin main  # pulls or gets files from Github to pi
 
