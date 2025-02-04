@@ -72,8 +72,8 @@ Also need to attach on relay, vcc to 5v on Rpi and gnd to ground on Rpi
 
 '''
 
-relay_1 = DigitalInOut(board.D21) #BLUE, IN1
-relay_2 = DigitalInOut(board.D20) #GREEN, IN2
+relay_1 = DigitalInOut(board.D17) #BLUE, IN1
+relay_2 = DigitalInOut(board.D27) #GREEN, IN2
 
 relay_1.direction = Direction.OUTPUT
 relay_2.direction = Direction.OUTPUT
