@@ -21,6 +21,10 @@ Setting up OS for raspberry pi:
   - https://www.raspberrypi.com/news/coding-on-raspberry-pi-remotely-with-visual-studio-code/
   - https://randomnerdtutorials.com/raspberry-pi-remote-ssh-vs-code/
 
+Useful linux commands:
+- To see running python scripts: ps aux | grep python
+- Options for connecting to output from an already running python program:
+  - https://forums.raspberrypi.com/viewtopic.php?t=99257
 
 Libraries needed:
 - CircuitPython
