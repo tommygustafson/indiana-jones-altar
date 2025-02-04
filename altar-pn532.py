@@ -122,8 +122,8 @@ def add_tag_to_list(tag_list, uid):
 
 def process_tag(tag_list,uid,prior_tag_str):
     # TO DO: Make extend and retractor tag as lists to allow multiple tags / objects
-    extend_actuator_tag = "88856146162137"
-    retract_actuator_tag = "24023514149"
+    extend_actuator_tag = "8131164137"
+    retract_actuator_tag = "8018321730"
 
     # datetime object containing current date and time
     now = datetime.now()
