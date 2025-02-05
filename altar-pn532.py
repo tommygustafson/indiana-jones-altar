@@ -41,7 +41,7 @@ from digitalio import DigitalInOut, Direction, Pull
 import time
 import struct
 from datetime import datetime
-#from circuitpython_nrf24l01.rf24 import RF24
+from circuitpython_nrf24l01.rf24 import RF24
 from adafruit_pn532.spi import PN532_SPI
 import subprocess
 
