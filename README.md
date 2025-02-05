@@ -17,6 +17,13 @@ Setting up OS for raspberry pi:
 - - Git commit -am “commit notes”
   - Git push origin main   # pushes changes on pi’s to GitHub
   - Git pull origin main  # pulls or gets files from Github to pi
+- Enable SPI 1
+  - https://tutorials.technology/tutorials/69-Enable-additonal-spi-ports-on-the-raspberrypi.html
+  - To enable spi1 also another line to the /boot/firmware/config.txt
+    - dtoverlay=spi1-3cs
+  - Double check with command: ls /dev/spidev*
+    - Should see somthing like: 
+    - /dev/spidev0.0  /dev/spidev0.1  /dev/spidev1.0  /dev/spidev1.1  /dev/spidev1.2
 - Use Visual Code Studio running on main PC to edit code directly on Raspberry Pi using "Remote SSH" plugin
   - https://www.raspberrypi.com/news/coding-on-raspberry-pi-remotely-with-visual-studio-code/
   - https://randomnerdtutorials.com/raspberry-pi-remote-ssh-vs-code/
