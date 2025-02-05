@@ -242,8 +242,8 @@ prior_tag_str = ""
 print("Setting up nRF")
 # addresses needs to be in a buffer protocol object (bytearray)
 address = b"1Node"
-ce_nrf_pin = DigitalInOut(board.GP2)
-csn_nrf_pin = DigitalInOut(board.GP3)
+ce_nrf_pin = DigitalInOut(board.D6)
+csn_nrf_pin = DigitalInOut(board.D13)
 nrf = RF24(spi, csn_nrf_pin, ce_nrf_pin)
 
 nrf.open_tx_pipe(address)  # set address of RX node into a TX pipe
