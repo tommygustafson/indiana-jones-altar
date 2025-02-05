@@ -31,6 +31,10 @@ Libraries needed:
   - Already installed during setup of raspberry pi
 - Adafruit_pn532
   - pip3 install adafruit-circuitpython-pn532
+- Circuitpython-nrf24l01
+  - pip3 install circuitpython-nrf24l01
+  - Documentation and info on wiring:
+    - https://circuitpython-nrf24l01.readthedocs.io/en/latest/
 
 PN_532 setup
 - Uses 4 pins, plus a Vcc and Gnd
