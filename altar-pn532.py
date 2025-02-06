@@ -237,22 +237,25 @@ prior_tag_str = ""
 # Set up nrf
 ##################
 '''
-
-'''
 print("Setting up nRF")
 # addresses needs to be in a buffer protocol object (bytearray)
+spi2SCLK = board.D21
+spi2MOSI = board.D20
+spi2MISO = board.D19
 address = b"1Node"
+#spi2 = busio.SPI(spi2SCLK, spi2MOSI, spi2MISO)
 ce_nrf_pin = DigitalInOut(board.D6)
 csn_nrf_pin = DigitalInOut(board.D13)
-nrf = RF24(spi, csn_nrf_pin, ce_nrf_pin)
 
-nrf.open_tx_pipe(address)  # set address of RX node into a TX pipe
-nrf.listen = False  # ensures the nRF24L01 is in TX mode
+#nrf = RF24(spi, csn_nrf_pin, ce_nrf_pin)
+#nrf.open_tx_pipe(address)  # set address of RX node into a TX pipe
+#nrf.listen = False  # ensures the nRF24L01 is in TX mode
 
 print("#######")
 print("Setup of nRF completed")
 print("#######")
-'''
+
+
 print("#######")
 print("Setup of PN532 completed")
 print("#######")

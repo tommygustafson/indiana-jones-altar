@@ -42,6 +42,17 @@ Libraries needed:
   - pip3 install circuitpython-nrf24l01
   - Documentation and info on wiring:
     - https://circuitpython-nrf24l01.readthedocs.io/en/latest/
+- Pygame
+  - pip3 install pygame
+  - Used for mp3 / audio playback
+  - import pygame
+
+pygame.mixer.init()
+pygame.mixer.music.load("file.mp3")
+pygame.mixer.music.set_volume(1.0)
+pygame.mixer.music.play()
+while pygame.mixer.music.get_busy() == True:
+	pass
 
 PN_532 setup
 - Uses 4 pins, plus a Vcc and Gnd
