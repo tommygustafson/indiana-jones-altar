@@ -44,6 +44,7 @@ from datetime import datetime
 from circuitpython_nrf24l01.rf24 import RF24
 from adafruit_pn532.spi import PN532_SPI
 import subprocess
+import pygame
 
 '''
 ###############
@@ -145,6 +146,7 @@ def process_tag(tag_list,uid,prior_tag_str):
             extend_actuator()
         if tag_str == retract_actuator_tag:
             retract_actuator()
+            play_boulder_crash_mp3()
 
 
     # Return current tag_str to become prior_tag_str
@@ -171,6 +173,13 @@ def is_actuator_moving():
         return True
     else:
         return False
+
+def play_boulder_crash_mp3():
+    mp3file = "/home/tom/indiana-jones-altar/mp3/trimmed-boulder.mp3"
+    pygame.mixer.init()
+    pygame.mixer.music.load(mp3file)
+    pygame.mixer.music.set_volume(1.0)
+    pygame.mixer.music.play()
 
 def send_data_nrf(data):
     #data = 1234
