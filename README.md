@@ -67,6 +67,8 @@ PN_532 setup
 Motor Driver for vibration motors
 - https://a.co/d/gjHqzjY
 - Here is useful details from Amazon page
+- https://www.youtube.com/watch?v=OV0S_3KMj2A
+- https://www.collvy.com/blog/controlling-dc-motor-with-raspberry-pi
 ```
 1) This double H-bridge can run two motors independently of each other.
 2) Each motor can run forward, reverse, brake, full speed forward, and full speed reverse.
