@@ -66,7 +66,8 @@ PN_532 setup
 
 Motor Driver for vibration motors
 - Use PWM:
-- - https://docs.circuitpython.org/en/latest/shared-bindings/pwmio/
+  - https://docs.circuitpython.org/en/latest/shared-bindings/pwmio/
+  - https://docs.circuitpython.org/projects/motor/en/latest/
 - https://a.co/d/gjHqzjY
 - Here is useful details from Amazon page
 - https://www.youtube.com/watch?v=OV0S_3KMj2A
