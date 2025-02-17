@@ -65,6 +65,8 @@ PN_532 setup
   - SS (on red PN532) connects to GPIO 5
 
 Motor Driver for vibration motors
+- Use PWM:
+- - https://docs.circuitpython.org/en/latest/shared-bindings/pwmio/
 - https://a.co/d/gjHqzjY
 - Here is useful details from Amazon page
 - https://www.youtube.com/watch?v=OV0S_3KMj2A
