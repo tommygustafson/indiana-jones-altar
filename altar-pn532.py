@@ -45,6 +45,8 @@ from circuitpython_nrf24l01.rf24 import RF24
 from adafruit_pn532.spi import PN532_SPI
 import subprocess
 import pygame
+import pwmio
+from threading import Timer
 
 '''
 ###############
@@ -92,6 +94,53 @@ relay_2.direction = Direction.OUTPUT
 
 relay_1.value = True
 relay_2.value = True
+
+'''
+####################################
+# Set up output pins for motor controller (L298N) for rumble motor control
+#
+# Two digital outputs:
+# rumble_1 = D23
+# rumble_2 = D24
+#
+# no rumble when rumble_1 = rumble_2 = False
+# yes rumbler with rumble _1 != rumble_2 (i.e. 1 = True, 2 = False)
+#
+# Uses 3rd pin for PWM output
+# Uses pwmio library
+# pwm = D18
+# strenth of rumble is the percentage of 2 ** 16 duty cycle
+# pwm.duty_cycle = max_duty_cycle
+'''
+print("#################")
+print("setting up PWM for rumble motors")
+
+max_duty_cycle = (2 ** 16) - 2
+medium_duty_cycle = (2 ** 16) / 2
+low_duty_cycle = (2 ** 16) / 4
+off_duty_cycle = 0
+
+rumble_1 = DigitalInOut(board.D23)
+rumble_2 = DigitalInOut(board.D24)
+pwm = pwmio.PWMOut(board.D18, frequency=50)
+rumble_1.direction = Direction.OUTPUT
+rumble_2.direction = Direction.OUTPUT
+
+# Start with rumble OFF
+rumble_1.value = False
+rumble_2.value = False
+
+def stop_rumble():
+    rumble_1.value = False
+    rumble_2.value = False
+
+def start_rumble(duty_cycle):
+    rumble_1.value = True
+    rumble_2.value = False
+    pwm.duty_cycle = duty_cycle
+
+print("end set up of rumble motors")
+print("#########################\n")
 
 #def add_tag_to_list(tag_list, uid, pixels):
 def add_tag_to_list(tag_list, uid):
@@ -147,6 +196,9 @@ def process_tag(tag_list,uid,prior_tag_str):
         if tag_str == retract_actuator_tag:
             retract_actuator()
             play_boulder_crash_mp3()
+            start_rumble(low_duty_cycle)
+            t = Timer(5, stop_rumble)
+            t.start() # stop_rumble will be called after a 5 second interval
 
 
     # Return current tag_str to become prior_tag_str
